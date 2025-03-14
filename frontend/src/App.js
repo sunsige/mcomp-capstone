@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import LandingPage from './components/LandingPage';
 import ChatWindow from './components/ChatWindow';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Regulatory Compliance Chatbot</h1>
-      <ChatWindow />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/chat" element={<ChatWindow />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
