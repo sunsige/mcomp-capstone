@@ -6,9 +6,11 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-      <h1>Regulatory Compliance Chatbot</h1>
-      <p>Get instant, accurate answers to complex regulatory questions.</p>
-      <button onClick={() => navigate('/chat')}>Start Chatting</button>
+      <div className="hero-section">
+        <h1>Simplify Regulatory Compliance with AI</h1>
+        <p>Get instant, accurate answers to complex regulatory questions.</p>
+        <button onClick={() => navigate('/chat')}>Get Started</button>
+      </div>
     </div>
   );
 };
