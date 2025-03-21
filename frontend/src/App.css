@@ -1,3 +1,31 @@
+/* Light Mode (Default) */
+:root {
+  --background-colour: #2b3137;
+  --text-colour: white;
+  --navbar-bg-colour: #f7f4f3;
+  --navbar-text-colour: #2b3137;
+  --card-bg-colour: #2b3137;
+  --card-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --button-bg-colour: #9db6c9;
+  --button-hover-colour: #c9d9e4;
+  --footer-bg-colour: #222630;
+  --footer-text-colour: white;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --background-colour: #1a1a1a;
+  --text-colour: #f4f4f9;
+  --navbar-bg-colour: #121212;
+  --navbar-text-colour: #f4f4f9;
+  --card-bg-colour: #333;
+  --card-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  --button-bg-colour: #21a1f1;
+  --button-hover-colour: #61dafb;
+  --footer-bg-colour: #121212;
+  --footer-text-colour: #f4f4f9;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   margin: 0;
@@ -5,11 +33,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f4f4f9;
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+}
+
+h0 {
+  font-family: 'Raleway', sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: 'Gloock', serif;
+  font-family: 'Raleway', serif;
 }
 
 .App {
@@ -17,7 +50,7 @@ h1, h2, h3 {
   flex-direction: column;
   flex: 1;
   min-height: 100vh;
-  text-align: center;
+  text-align: left;
 }
 
 main {
@@ -26,9 +59,9 @@ main {
 }
 
 .navbar {
-  background-color: #282c34;
+  background-color: var(--navbar-bg-colour);
   padding: 1rem;
-  color: white;
+  color: var(--navbar-text-colour);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,30 +74,22 @@ main {
 
 .logo {
   height: 40px;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
+  margin-top: 0.2rem;
+  transform: scale(1.6);
 }
 
-.navbar-logo h1 {
+.navbar-logo h0 {
   margin: 0;
-  font-size: 1.5rem;
-  letter-spacing: 0.16rem;
-}
-
-.navbar-logo span {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-
-.navbar-logo h1 {
-  margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
 }
 
 .navbar-links a {
-  color: white;
+  color: var(--navbar-text-colour);
   margin: 0 1rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .navbar-links a:hover {
@@ -79,41 +104,48 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: white;
+  background-color: var(--card-bg-colour);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
 }
 
 .hero-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 4.8rem;
+  font-weight: 300;
+  letter-spacing: 0.28rem;
+  margin-bottom: 1.6rem;
 }
 
 .hero-section p {
+  font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.12rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-section button {
+  margin-top: 1.2rem;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  background-color: #61dafb;
+  background-color: var(--button-bg-colour);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .hero-section button:hover {
-  background-color: #21a1f1;
+  background-color: var(--button-hover-colour);
 }
 
 .features-section {
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: var(--background-colour);
 }
 
 .features-section h2 {
   font-size: 2rem;
+  font-weight: 300;
   margin-bottom: 2rem;
 }
 
@@ -125,9 +157,9 @@ main {
 
 .feature-card {
   padding: 1.5rem;
-  background-color: white;
+  background-color: var(--card-bg-colour);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   text-align: center;
 }
 
@@ -136,7 +168,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.testimonials-section {
+/* .testimonials-section {
   padding: 2rem;
 }
 
@@ -153,15 +185,15 @@ main {
 
 .testimonial-card {
   padding: 1.5rem;
-  background-color: white;
+  background-color: var(--card-bg-colour);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   text-align: center;
-}
+} */
 
 .footer {
-  background-color: #282c34;
-  color: white;
+  background-color: var(--footer-bg-colour);
+  color: var(--footer-text-colour);
   padding: 2rem;
   text-align: center;
   margin-top: 2rem;
@@ -180,7 +212,7 @@ main {
 }
 
 .footer a {
-  color: white;
+  color: var(--footer-text-colour);
   text-decoration: none;
 }
 

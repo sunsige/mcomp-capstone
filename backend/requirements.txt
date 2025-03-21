@@ -1,4 +1,8 @@
 fastapi
 uvicorn
-sqlalchemy
-python-dotenv
+pymupdf
+numpy
+transformers
+faiss-cpu
+yake
+openai

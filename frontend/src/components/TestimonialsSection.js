@@ -5,12 +5,12 @@ const TestimonialsSection = () => {
     {
       name: 'John Doe',
       role: 'Compliance Officer',
-      feedback: 'This chatbot has revolutionized our compliance process. Highly recommended!',
+      feedback: 'This chatbot has revolutionised our compliance process. Highly recommended!',
     },
     {
       name: 'Jane Smith',
       role: 'Risk Manager',
-      feedback: 'The real-time updates feature is a game-changer for our team.',
+      feedback: 'This is a game-changer for our team.',
     },
   ];
 
